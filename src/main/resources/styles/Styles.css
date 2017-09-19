@@ -1,0 +1,9 @@
+.button {
+    -fx-font-weight: bold;
+}
+
+.size-tree-table-cell {
+    -fx-alignment: CENTER_RIGHT;
+    -fx-text-alignment: right;
+    -fx-label-padding: 0 5 0 0;
+}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="appContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1024.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tjc.jfx.filemanager.FileManagerSceneController">
+    <children>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="menuItemClose" mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuEdit" mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuView" mnemonicParsing="false" text="View">
+                    <items>
+                  <CheckMenuItem fx:id="checkMenuItemShowHidden" mnemonicParsing="false" text="Show Hidden Files" />
+                  <CheckMenuItem fx:id="showToolBarMenuItem" mnemonicParsing="false" text="Show ToolBar" />
+                    </items>
+                </Menu>
+                <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <ToolBar fx:id="toolBar" VBox.vgrow="NEVER">
+         <items>
+            <Button mnemonicParsing="false" text="Button" />
+         </items>
+      </ToolBar>
+        <SplitPane fx:id="primarySplitPane" dividerPositions="0.30861504907306436" minHeight="300.0" minWidth="400.0" snapToPixel="false" VBox.vgrow="ALWAYS">
+            <items>
+                <Accordion fx:id="favoritesAccordian" SplitPane.resizableWithParent="false">
+                    <panes>
+                        <TitledPane fx:id="favoritesTitledPane" prefHeight="200.0" prefWidth="200.0" styleClass="favorites-titled-pane" text="Favorites">
+                            <content>
+                                <ListView fx:id="favoritesListView" />
+                            </content>
+                        </TitledPane>
+                    </panes>
+                </Accordion>
+                <TreeTableView fx:id="treeTable" prefHeight="200.0" prefWidth="200.0" />
+            </items>
+        </SplitPane>
+        <HBox fx:id="statusBar" prefHeight="25.0" prefWidth="600.0" VBox.vgrow="NEVER">
+            <children>
+                <Label fx:id="statusBarItemCount" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="1007.0" text="Items" HBox.hgrow="ALWAYS" />
+            </children>
+            <padding>
+                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+            </padding>
+        </HBox>
+    </children>
+</VBox>

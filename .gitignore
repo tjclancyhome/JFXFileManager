@@ -1,11 +1,37 @@
-# Compiled class file
+# generated files
+out/
+build/
+dist/
+config/context.xml
+config/srp.properties
+lib/web/template.jar
+src/com/securityworks/Srp.properties
+web/META-INF/context.xml
+web/scripts/assessment.js
+web/scripts/dashboard.js
+web/scripts/reference.js
+web/scripts/srp.js
+web/scripts/srp-min.js
+web/scripts/srp-min-min.js
+web/styles/styles.css
+*.swp
+
+# per-dev files
+.idea/
+*.bak_*
+*.vpp.lck
+*.iml*
+dev/env-*
+
+plugins/*/dist
+plugins/lib
+build.number
+
+# OS-generated junk
+.DS_Store
+
+# Java-specific
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -14,9 +40,67 @@
 *.jar
 *.war
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# everyone gets their own copy of the data, since it's managed by the tool
+/lib/tools/owasp-dependency-check/data
+
+# Maven generated target
+target/
+
+# Netbeans project cruft
+nbproject/
+
+# Eclipse artifacts
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
